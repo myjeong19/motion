@@ -1,9 +1,11 @@
-import { Transitions } from './components/simple_animations/Transitions';
+// import { Transitions } from './components/simple_animations/Transitions';
+import { Keyframes } from './components/simple_animations/Keyframes';
 
 function App() {
   return (
     <>
-      <Transitions />
+      {/* <Transitions /> */}
+      <Keyframes />
     </>
   );
 }
