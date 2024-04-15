@@ -41,5 +41,27 @@
   - times는 키프레임 배열과 동일한 길이의 배열로, 0과 1 사이의 숫자로 애니메이션에서 각 키프레임을 누를 위치를 정의한다.
 
 ```jsx
-<motion.circle cx={500} animate={{ cx: [null, 100, 200] }} transition={{ duration: 3, times: [0, 0.2, 1] }} />
+<motion.circle
+  cx={500}
+  animate={{ cx: [null, 100, 200] }}
+  transition={{ duration: 3, times: [0, 0.2, 1] }}
+/>
 ```
+
+## Gesture animations
+
+- 프레임 모션에는 제스처가 시작될 때 hover, tap, drag, focus, inView와 같은 일련의 값에 애니메이션을 적용하는 단축키가 있으며,  
+  제스처가 끝나면 어떤 값으로 애니메이션을 다시 적용할지 자동으로 알아낸다.
+
+  ```jsx
+  <motion.button
+    className={classes.box}
+    initial={{ opacity: 0.6 }}
+    whileHover={{
+      scale: 1.2,
+      transition: { duration: 1 },
+    }}
+    whileTap={{ scale: 0.9 }}
+    whileInView={{ opacity: 1 }}
+  />
+  ```
